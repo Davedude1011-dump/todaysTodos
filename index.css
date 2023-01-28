@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(27, 30, 45);
+    overflow: hidden;
+}
+
+.mouseFollowText {
+    position: absolute;
+    width: fit-content;
+    translate: -40%;
+    transition: 0.15s ease-out;
+    z-index: 999;
+    color: antiquewhite;
+    font-weight: bold;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+@media screen and (orientation: portrait) {
+    .mouseFollowText {
+        display: none
+    }
+}
+
+
+
+
+.title {
+    position: relative;
+    width: 100%;
+    margin-top: 1.5%;
+    font-size: 5vw;
+    font-weight: bold;
+    font-family: Lobster Two;
+    color: antiquewhite;
+    text-align: center;
+}
+.sub-title {
+    position: relative;
+    width: 100%;
+    margin-top: 1.5%;
+    font-size: 1.25vw;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: antiquewhite;
+    text-align: center;
+    text-decoration: underline #FFF500;
+}
+
+.toReview {
+    position: absolute;
+    left: 50%;
+    translate: -101%;
+    top: 50%;
+    width: 15vw;
+    height: 10vh;
+    border-top-left-radius: 15vw;
+    border-bottom-left-radius: 15vw;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: #444654;
+    font-size: 1.25vw;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: antiquewhite;
+}
+.toEdit {
+    position: absolute;
+    left: 50%;
+    translate: 1%;
+    top: 50%;
+    width: 15vw;
+    height: 10vh;
+    border-top-right-radius: 15vw;
+    border-bottom-right-radius: 15vw;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: #444654;
+    font-size: 1.25vw;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: antiquewhite;
+}
+.toEdit:hover, .toReview:hover {
+    width: 16vw;
+}
+
+@media screen and (max-width: 1000px) {
+    .title {
+        font-size: 8vw;
+    }
+    .sub-title {
+        font-size: 2vw;
+    }
+    .toReview, .toEdit {
+        width: 12vw;
+        height: 8vh;
+    }
+    .toReview {
+        width: 30vw;
+        font-size: 2.25vw;
+    }
+    .toEdit {
+        width: 30vw;
+        font-size: 2.25vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .title {
+        font-size: 10vw;
+    }
+    .sub-title {
+        font-size: 3vw;
+    }
+    .toReview, .toEdit {
+        width: 12vw;
+        height: 8vh;
+    }
+    .toReview {
+        width: 40vw;
+        font-size: 3.25vw;
+    }
+    .toEdit {
+        width: 40vw;
+        font-size: 3.25vw;
+    }
+}

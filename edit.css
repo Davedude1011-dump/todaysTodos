@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(27, 30, 45);
+    overflow: hidden;
+}
+
+.bar {
+    position: relative;
+    left: 50%;
+    margin-top: 3%;
+    translate: -50%;
+    width: 80vw;
+    height: 10vh;
+    background-color: antiquewhite;
+}
+.bar-inner {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    transition: 0.1s;
+    cursor: pointer;
+}
+.bar-inner-title {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: fit-content;
+    translate: 0 -50%;
+    text-align: center;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 1.3vw;
+    color:rgb(27, 30, 45)
+}
+.bar-inner .start-time {
+    position: absolute;
+    font-weight: bold;
+    font-family: sans-serif;
+    left: 0;
+    bottom: 0;
+    width: fit-content;
+    height: fit-content;
+    translate: -50% 100%;
+    font-size: 60%;
+    color:antiquewhite;
+    opacity: 0;
+    display: block;
+}
+.bar-inner .end-time {
+    position: absolute;
+    font-weight: bold;
+    font-family: sans-serif;
+    right: 0;
+    bottom: 0;
+    width: fit-content;
+    height: fit-content;
+    translate: 50% 100%;
+    font-size: 60%;
+    color:antiquewhite;
+    opacity: 0;
+    display: block;
+}
+.bar-inner:hover .start-time, 
+.bar-inner:hover .end-time {
+    opacity: 1;
+}
+.bar-inner:hover {
+    filter: brightness(85%);
+}
+
+.homeButton {
+    position: relative;
+    left: 50%;
+    translate: -50% 0;
+    margin-top: 2.5%;
+    width: calc(25vw - 10px);
+    height: calc(15% - 10px);
+    background-color: #444654;
+    text-align: center;
+    border: none;
+    padding: 10px;
+    border-radius: 0.8vw;
+
+    color: antiquewhite;
+    font-weight: bold;
+    font-family: sans-serif;
+
+    cursor: pointer;
+}
+
+.edit-outer {
+    position: relative;
+    left: 50%;
+    margin-top: 2.5%;
+    height: 55vh;
+    width: 25vw;
+    background-color: #444654;
+    border-radius: 1.5vw;
+    translate: -50%;
+}
+
+.edit-input {
+    position: relative;
+    left: 50%;
+    translate: -50% 0;
+    margin-top: 5%;
+    width: calc(85% - 10px);
+    height: calc(7% - 10px);
+    background-color: #262734;
+    text-align: left;
+    border: none;
+    padding: 10px;
+    border-radius: 0.8vw;
+
+    color: antiquewhite;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.colorInput {
+    position: relative;
+    left: 50%;
+    translate: -50% 0;
+    margin-top: 5%;
+    width: calc(90% - 10px);
+    height: calc(15% - 10px);
+    background-color: #262734;
+    text-align: left;
+    border: none;
+    padding: 10px;
+    border-radius: 0.8vw;
+
+    color: antiquewhite;
+    font-weight: bold;
+    font-family: sans-serif;
+
+    cursor: pointer;
+}
+.inputTestButton {
+    position: absolute;
+    left: 50%;
+    translate: -50% 0;
+    bottom: 5%;
+    width: calc(85% - 10px);
+    height: calc(15% - 10px);
+    background-color: #262734;
+    text-align: center;
+    border: none;
+    padding: 10px;
+    border-radius: 0.8vw;
+
+    color: antiquewhite;
+    font-weight: bold;
+    font-family: sans-serif;
+
+    cursor: pointer;
+}
+
+.day-title {
+    position: relative;
+    width: 100vw;
+    height: fit-content;
+    font-size: 4vw;
+    font-family: Lobster Two;
+    color: antiquewhite;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.nextDayButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3vw;
+    height: 100vh;
+    background-color: transparent;
+    border: none;
+    border-left: 1.5px dashed antiquewhite;
+    cursor: pointer;
+
+    font-size: 120%;
+    
+    color: antiquewhite;
+    font-weight: bold;
+    text-align: center;
+}
+.prevDayButton {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3vw;
+    height: 100vh;
+    background-color: transparent;
+    border: none;
+    border-right: 1.5px dashed antiquewhite;
+    cursor: pointer;
+
+    font-size: 120%;
+    
+    color: antiquewhite;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mouseFollowText {
+    position: absolute;
+    width: fit-content;
+    translate: -40%;
+    transition: 0.15s ease-out;
+    z-index: 999;
+    color: antiquewhite;
+    font-weight: bold;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+@media screen and (orientation: portrait) {
+    .mouseFollowText {
+        display: none
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .nextDayButton {
+        width: 6vw;
+        font-size: 80%;
+    }
+    .prevDayButton {
+        width: 6vw;
+        font-size: 80%;
+    }
+    .day-title {
+        font-size: 8vw;
+    }
+    body {
+        font-size: 14px;
+    }
+    .bar {
+        width: 80vw;
+        height: 8vh;
+    }
+    .homeButton {
+        width: calc(75vw - 10px);
+        height: calc(8% - 10px);
+        font-size: 80%;
+    }
+    .edit-outer {
+        font-size: 80%;
+        width: 80vw;
+        height: 65vh;
+    }
+    .edit-input {
+        width: calc(95% - 10px);
+        height: calc(5% - 10px);
+        font-size: 80%;
+    }
+    .colorInput {
+        width: calc(95% - 10px);
+        height: calc(10% - 10px);
+        font-size: 80%;
+    }
+    .inputTestButton {
+        width: calc(95% - 10px);
+        height: calc(7% - 10px);
+        font-size: 80%;
+    }
+}
+    
